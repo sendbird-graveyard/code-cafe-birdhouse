@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E8144584DB8809B6430C717 /* Pods_Birdhouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECE7DE0AD5F94A53D96FDBAF /* Pods_Birdhouse.framework */; };
+		27A19C6488B0F79EC04F0CA6 /* Pods_Birdhouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FCDCA2CF88AC4F99D517FF /* Pods_Birdhouse.framework */; };
 		52A39319272841CC001D7959 /* Gellix-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52A39310272841CC001D7959 /* Gellix-ExtraBold.otf */; };
 		52A3931A272841CC001D7959 /* Gellix-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52A39311272841CC001D7959 /* Gellix-Light.otf */; };
 		52A3931B272841CC001D7959 /* Gellix-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52A39312272841CC001D7959 /* Gellix-Thin.otf */; };
@@ -33,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		520EE0C6327B96B637922AC8 /* Pods-Birdhouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Birdhouse.release.xcconfig"; path = "Target Support Files/Pods-Birdhouse/Pods-Birdhouse.release.xcconfig"; sourceTree = "<group>"; };
 		52A39310272841CC001D7959 /* Gellix-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gellix-ExtraBold.otf"; sourceTree = "<group>"; };
 		52A39311272841CC001D7959 /* Gellix-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gellix-Light.otf"; sourceTree = "<group>"; };
 		52A39312272841CC001D7959 /* Gellix-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gellix-Thin.otf"; sourceTree = "<group>"; };
@@ -58,9 +59,8 @@
 		52D8AB832717D4B100009B9D /* ChannelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListViewController.swift; sourceTree = "<group>"; };
 		52D8AB862717D55800009B9D /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		52E44756271DDE7200547030 /* ChannelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTableViewCell.swift; sourceTree = "<group>"; };
-		6C24160972CCA1E29FA065E0 /* Pods-Birdhouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Birdhouse.debug.xcconfig"; path = "Target Support Files/Pods-Birdhouse/Pods-Birdhouse.debug.xcconfig"; sourceTree = "<group>"; };
-		B19A8907FA1742250194DDB9 /* Pods-Birdhouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Birdhouse.release.xcconfig"; path = "Target Support Files/Pods-Birdhouse/Pods-Birdhouse.release.xcconfig"; sourceTree = "<group>"; };
-		ECE7DE0AD5F94A53D96FDBAF /* Pods_Birdhouse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Birdhouse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		878C51D30A9B4E4A9A52291B /* Pods-Birdhouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Birdhouse.debug.xcconfig"; path = "Target Support Files/Pods-Birdhouse/Pods-Birdhouse.debug.xcconfig"; sourceTree = "<group>"; };
+		F8FCDCA2CF88AC4F99D517FF /* Pods_Birdhouse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Birdhouse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E8144584DB8809B6430C717 /* Pods_Birdhouse.framework in Frameworks */,
+				27A19C6488B0F79EC04F0CA6 /* Pods_Birdhouse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,7 +108,7 @@
 				52D8AB6A2717CE7C00009B9D /* Birdhouse */,
 				52D8AB692717CE7C00009B9D /* Products */,
 				8AE2D0DF6DA937556C8F23DA /* Pods */,
-				9D2DF0461B5A4DEA319FC1CB /* Frameworks */,
+				6A38100E8B8E5F71F671E2FC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,21 +172,21 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		6A38100E8B8E5F71F671E2FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8FCDCA2CF88AC4F99D517FF /* Pods_Birdhouse.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8AE2D0DF6DA937556C8F23DA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6C24160972CCA1E29FA065E0 /* Pods-Birdhouse.debug.xcconfig */,
-				B19A8907FA1742250194DDB9 /* Pods-Birdhouse.release.xcconfig */,
+				878C51D30A9B4E4A9A52291B /* Pods-Birdhouse.debug.xcconfig */,
+				520EE0C6327B96B637922AC8 /* Pods-Birdhouse.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		9D2DF0461B5A4DEA319FC1CB /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				ECE7DE0AD5F94A53D96FDBAF /* Pods_Birdhouse.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,11 +196,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52D8AB7C2717CE8000009B9D /* Build configuration list for PBXNativeTarget "Birdhouse" */;
 			buildPhases = (
-				09FD8A5EB52CF9A84740F348 /* [CP] Check Pods Manifest.lock */,
+				ED45262FD75C5448CEFCF256 /* [CP] Check Pods Manifest.lock */,
 				52D8AB642717CE7C00009B9D /* Sources */,
 				52D8AB652717CE7C00009B9D /* Frameworks */,
 				52D8AB662717CE7C00009B9D /* Resources */,
-				BA3229E390C446CD31753179 /* [CP] Embed Pods Frameworks */,
+				1FCD49D1C202FFE2124BF851 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -266,7 +266,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		09FD8A5EB52CF9A84740F348 /* [CP] Check Pods Manifest.lock */ = {
+		1FCD49D1C202FFE2124BF851 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Birdhouse/Pods-Birdhouse-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Birdhouse/Pods-Birdhouse-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Birdhouse/Pods-Birdhouse-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED45262FD75C5448CEFCF256 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -286,23 +303,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BA3229E390C446CD31753179 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Birdhouse/Pods-Birdhouse-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Birdhouse/Pods-Birdhouse-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Birdhouse/Pods-Birdhouse-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -466,7 +466,7 @@
 		};
 		52D8AB7D2717CE8000009B9D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6C24160972CCA1E29FA065E0 /* Pods-Birdhouse.debug.xcconfig */;
+			baseConfigurationReference = 878C51D30A9B4E4A9A52291B /* Pods-Birdhouse.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -495,7 +495,7 @@
 		};
 		52D8AB7E2717CE8000009B9D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B19A8907FA1742250194DDB9 /* Pods-Birdhouse.release.xcconfig */;
+			baseConfigurationReference = 520EE0C6327B96B637922AC8 /* Pods-Birdhouse.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
