@@ -19,6 +19,7 @@ class SignInViewController: UIViewController {
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 8, height: userIdTextField.frame.height))
         userIdTextField.leftView = paddingView
         userIdTextField.leftViewMode = .always
+        userIdTextField.delegate = self
     }
 
     @IBAction func signIn(_ sender: Any) {
@@ -31,5 +32,12 @@ class SignInViewController: UIViewController {
                 self.performSegue(withIdentifier: "login", sender: nil)
             }
         }
+    }
+}
+
+extension SignInViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
