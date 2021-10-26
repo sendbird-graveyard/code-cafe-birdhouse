@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E8144584DB8809B6430C717 /* Pods_Birdhouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECE7DE0AD5F94A53D96FDBAF /* Pods_Birdhouse.framework */; };
+		52B908D02726A862008FE4E2 /* Birdhouse+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B908CF2726A862008FE4E2 /* Birdhouse+String.swift */; };
+		52B908D22726A86A008FE4E2 /* Birdhouse+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B908D12726A86A008FE4E2 /* Birdhouse+UIView.swift */; };
+		52B908D42726A879008FE4E2 /* ChannelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B908D32726A879008FE4E2 /* ChannelManager.swift */; };
+		52B908D62726A899008FE4E2 /* Birdhouse+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B908D52726A899008FE4E2 /* Birdhouse+UIImageView.swift */; };
+		52D8AB6C2717CE7C00009B9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D8AB6B2717CE7C00009B9D /* AppDelegate.swift */; };
+		52D8AB6E2717CE7C00009B9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D8AB6D2717CE7C00009B9D /* SceneDelegate.swift */; };
+		52D8AB732717CE7C00009B9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52D8AB712717CE7C00009B9D /* Main.storyboard */; };
+		52D8AB752717CE8000009B9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52D8AB742717CE8000009B9D /* Assets.xcassets */; };
+		52D8AB782717CE8000009B9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52D8AB762717CE8000009B9D /* LaunchScreen.storyboard */; };
+		52D8AB812717D49400009B9D /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D8AB802717D49400009B9D /* SignInViewController.swift */; };
+		52D8AB842717D4B100009B9D /* ChannelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D8AB832717D4B100009B9D /* ChannelListViewController.swift */; };
+		52D8AB872717D55800009B9D /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D8AB862717D55800009B9D /* ChannelViewController.swift */; };
+		52E44757271DDE7200547030 /* ChannelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E44756271DDE7200547030 /* ChannelTableViewCell.swift */; };
+		52E44759271DDEAC00547030 /* ChannelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52E44758271DDEAC00547030 /* ChannelTableViewCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		52B908CF2726A862008FE4E2 /* Birdhouse+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Birdhouse+String.swift"; sourceTree = "<group>"; };
+		52B908D12726A86A008FE4E2 /* Birdhouse+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Birdhouse+UIView.swift"; sourceTree = "<group>"; };
+		52B908D32726A879008FE4E2 /* ChannelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelManager.swift; sourceTree = "<group>"; };
+		52B908D52726A899008FE4E2 /* Birdhouse+UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Birdhouse+UIImageView.swift"; sourceTree = "<group>"; };
+		52D8AB682717CE7C00009B9D /* Birdhouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Birdhouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52D8AB6B2717CE7C00009B9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		52D8AB6D2717CE7C00009B9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		52D8AB722717CE7C00009B9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		52D8AB742717CE8000009B9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52D8AB772717CE8000009B9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		52D8AB792717CE8000009B9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52D8AB802717D49400009B9D /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		52D8AB832717D4B100009B9D /* ChannelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListViewController.swift; sourceTree = "<group>"; };
+		52D8AB862717D55800009B9D /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
+		52E44756271DDE7200547030 /* ChannelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTableViewCell.swift; sourceTree = "<group>"; };
+		52E44758271DDEAC00547030 /* ChannelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChannelTableViewCell.xib; sourceTree = "<group>"; };
+		6C24160972CCA1E29FA065E0 /* Pods-Birdhouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Birdhouse.debug.xcconfig"; path = "Target Support Files/Pods-Birdhouse/Pods-Birdhouse.debug.xcconfig"; sourceTree = "<group>"; };
+		B19A8907FA1742250194DDB9 /* Pods-Birdhouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Birdhouse.release.xcconfig"; path = "Target Support Files/Pods-Birdhouse/Pods-Birdhouse.release.xcconfig"; sourceTree = "<group>"; };
+		ECE7DE0AD5F94A53D96FDBAF /* Pods_Birdhouse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Birdhouse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52D8AB652717CE7C00009B9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E8144584DB8809B6430C717 /* Pods_Birdhouse.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52B908CE2726A851008FE4E2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				52B908CF2726A862008FE4E2 /* Birdhouse+String.swift */,
+				52B908D12726A86A008FE4E2 /* Birdhouse+UIView.swift */,
+				52B908D52726A899008FE4E2 /* Birdhouse+UIImageView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		52D8AB5F2717CE7C00009B9D = {
+			isa = PBXGroup;
+			children = (
+				52D8AB6A2717CE7C00009B9D /* Birdhouse */,
+				52D8AB692717CE7C00009B9D /* Products */,
+				8AE2D0DF6DA937556C8F23DA /* Pods */,
+				9D2DF0461B5A4DEA319FC1CB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		52D8AB692717CE7C00009B9D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52D8AB682717CE7C00009B9D /* Birdhouse.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52D8AB6A2717CE7C00009B9D /* Birdhouse */ = {
+			isa = PBXGroup;
+			children = (
+				52D8AB6B2717CE7C00009B9D /* AppDelegate.swift */,
+				52D8AB6D2717CE7C00009B9D /* SceneDelegate.swift */,
+				52B908D32726A879008FE4E2 /* ChannelManager.swift */,
+				52B908CE2726A851008FE4E2 /* Extensions */,
+				52D8AB852717D54D00009B9D /* Channel */,
+				52D8AB822717D4A400009B9D /* ChannelList */,
+				52D8AB7F2717D47C00009B9D /* SignIn */,
+				52E44755271DDE5C00547030 /* View */,
+				52D8AB742717CE8000009B9D /* Assets.xcassets */,
+				52D8AB792717CE8000009B9D /* Info.plist */,
+			);
+			path = Birdhouse;
+			sourceTree = "<group>";
+		};
+		52D8AB7F2717D47C00009B9D /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				52D8AB802717D49400009B9D /* SignInViewController.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		52D8AB822717D4A400009B9D /* ChannelList */ = {
+			isa = PBXGroup;
+			children = (
+				52D8AB832717D4B100009B9D /* ChannelListViewController.swift */,
+				52E44756271DDE7200547030 /* ChannelTableViewCell.swift */,
+				52E44758271DDEAC00547030 /* ChannelTableViewCell.xib */,
+			);
+			path = ChannelList;
+			sourceTree = "<group>";
+		};
+		52D8AB852717D54D00009B9D /* Channel */ = {
+			isa = PBXGroup;
+			children = (
+				52D8AB862717D55800009B9D /* ChannelViewController.swift */,
+			);
+			path = Channel;
+			sourceTree = "<group>";
+		};
+		52E44755271DDE5C00547030 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				52D8AB712717CE7C00009B9D /* Main.storyboard */,
+				52D8AB762717CE8000009B9D /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8AE2D0DF6DA937556C8F23DA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6C24160972CCA1E29FA065E0 /* Pods-Birdhouse.debug.xcconfig */,
+				B19A8907FA1742250194DDB9 /* Pods-Birdhouse.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9D2DF0461B5A4DEA319FC1CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ECE7DE0AD5F94A53D96FDBAF /* Pods_Birdhouse.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52D8AB672717CE7C00009B9D /* Birdhouse */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52D8AB7C2717CE8000009B9D /* Build configuration list for PBXNativeTarget "Birdhouse" */;
+			buildPhases = (
+				09FD8A5EB52CF9A84740F348 /* [CP] Check Pods Manifest.lock */,
+				52D8AB642717CE7C00009B9D /* Sources */,
+				52D8AB652717CE7C00009B9D /* Frameworks */,
+				52D8AB662717CE7C00009B9D /* Resources */,
+				BA3229E390C446CD31753179 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Birdhouse;
+			productName = Birdhouse;
+			productReference = 52D8AB682717CE7C00009B9D /* Birdhouse.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52D8AB602717CE7C00009B9D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					52D8AB672717CE7C00009B9D = {
+						CreatedOnToolsVersion = 13.0;
+					};
+				};
+			};
+			buildConfigurationList = 52D8AB632717CE7C00009B9D /* Build configuration list for PBXProject "Birdhouse" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 52D8AB5F2717CE7C00009B9D;
+			productRefGroup = 52D8AB692717CE7C00009B9D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52D8AB672717CE7C00009B9D /* Birdhouse */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52D8AB662717CE7C00009B9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52D8AB782717CE8000009B9D /* LaunchScreen.storyboard in Resources */,
+				52E44759271DDEAC00547030 /* ChannelTableViewCell.xib in Resources */,
+				52D8AB752717CE8000009B9D /* Assets.xcassets in Resources */,
+				52D8AB732717CE7C00009B9D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09FD8A5EB52CF9A84740F348 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Birdhouse-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA3229E390C446CD31753179 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Birdhouse/Pods-Birdhouse-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Birdhouse/Pods-Birdhouse-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Birdhouse/Pods-Birdhouse-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52D8AB642717CE7C00009B9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52D8AB812717D49400009B9D /* SignInViewController.swift in Sources */,
+				52B908D02726A862008FE4E2 /* Birdhouse+String.swift in Sources */,
+				52B908D22726A86A008FE4E2 /* Birdhouse+UIView.swift in Sources */,
+				52E44757271DDE7200547030 /* ChannelTableViewCell.swift in Sources */,
+				52D8AB6C2717CE7C00009B9D /* AppDelegate.swift in Sources */,
+				52D8AB6E2717CE7C00009B9D /* SceneDelegate.swift in Sources */,
+				52B908D62726A899008FE4E2 /* Birdhouse+UIImageView.swift in Sources */,
+				52D8AB872717D55800009B9D /* ChannelViewController.swift in Sources */,
+				52D8AB842717D4B100009B9D /* ChannelListViewController.swift in Sources */,
+				52B908D42726A879008FE4E2 /* ChannelManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		52D8AB712717CE7C00009B9D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52D8AB722717CE7C00009B9D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		52D8AB762717CE8000009B9D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52D8AB772717CE8000009B9D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		52D8AB7A2717CE8000009B9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		52D8AB7B2717CE8000009B9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		52D8AB7D2717CE8000009B9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C24160972CCA1E29FA065E0 /* Pods-Birdhouse.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RM4A5PXTUX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Birdhouse/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sendbird.Birdhouse;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		52D8AB7E2717CE8000009B9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B19A8907FA1742250194DDB9 /* Pods-Birdhouse.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RM4A5PXTUX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Birdhouse/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sendbird.Birdhouse;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52D8AB632717CE7C00009B9D /* Build configuration list for PBXProject "Birdhouse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52D8AB7A2717CE8000009B9D /* Debug */,
+				52D8AB7B2717CE8000009B9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52D8AB7C2717CE8000009B9D /* Build configuration list for PBXNativeTarget "Birdhouse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52D8AB7D2717CE8000009B9D /* Debug */,
+				52D8AB7E2717CE8000009B9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 52D8AB602717CE7C00009B9D /* Project object */;
+}
