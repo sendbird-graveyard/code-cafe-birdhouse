@@ -16,6 +16,7 @@
 		52A3931E272841CC001D7959 /* Gellix-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52A39315272841CC001D7959 /* Gellix-Regular.otf */; };
 		52A3931F272841CC001D7959 /* Gellix-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52A39316272841CC001D7959 /* Gellix-Medium.otf */; };
 		52A39320272841CC001D7959 /* Gellix-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52A39317272841CC001D7959 /* Gellix-SemiBold.otf */; };
+		52A393232728551A001D7959 /* ParticipantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A393222728551A001D7959 /* ParticipantCell.swift */; };
 		52B908D02726A862008FE4E2 /* Birdhouse+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B908CF2726A862008FE4E2 /* Birdhouse+String.swift */; };
 		52B908D22726A86A008FE4E2 /* Birdhouse+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B908D12726A86A008FE4E2 /* Birdhouse+UIView.swift */; };
 		52B908D42726A879008FE4E2 /* ChannelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B908D32726A879008FE4E2 /* ChannelManager.swift */; };
@@ -41,6 +42,7 @@
 		52A39316272841CC001D7959 /* Gellix-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gellix-Medium.otf"; sourceTree = "<group>"; };
 		52A39317272841CC001D7959 /* Gellix-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gellix-SemiBold.otf"; sourceTree = "<group>"; };
 		52A39318272841CC001D7959 /* Gellix-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gellix-Medium.otf"; path = "../../../../../../Downloads/drive-download-20210706T060923Z-001/Gellix-Medium.otf"; sourceTree = "<group>"; };
+		52A393222728551A001D7959 /* ParticipantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantCell.swift; sourceTree = "<group>"; };
 		52B908CF2726A862008FE4E2 /* Birdhouse+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Birdhouse+String.swift"; sourceTree = "<group>"; };
 		52B908D12726A86A008FE4E2 /* Birdhouse+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Birdhouse+UIView.swift"; sourceTree = "<group>"; };
 		52B908D32726A879008FE4E2 /* ChannelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelManager.swift; sourceTree = "<group>"; };
@@ -73,7 +75,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		52A3930F272841B7001D7959 /* New Group */ = {
+		52A3930F272841B7001D7959 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				52A39313272841CC001D7959 /* Gellix-Black.otf */,
@@ -86,7 +88,7 @@
 				52A39317272841CC001D7959 /* Gellix-SemiBold.otf */,
 				52A39312272841CC001D7959 /* Gellix-Thin.otf */,
 			);
-			path = "New Group";
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		52B908CE2726A851008FE4E2 /* Extensions */ = {
@@ -123,7 +125,7 @@
 				52D8AB6B2717CE7C00009B9D /* AppDelegate.swift */,
 				52D8AB6D2717CE7C00009B9D /* SceneDelegate.swift */,
 				52B908D32726A879008FE4E2 /* ChannelManager.swift */,
-				52A3930F272841B7001D7959 /* New Group */,
+				52A3930F272841B7001D7959 /* Resources */,
 				52B908CE2726A851008FE4E2 /* Extensions */,
 				52D8AB852717D54D00009B9D /* Channel */,
 				52D8AB822717D4A400009B9D /* ChannelList */,
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				52D8AB862717D55800009B9D /* ChannelViewController.swift */,
+				52A393222728551A001D7959 /* ParticipantCell.swift */,
 			);
 			path = Channel;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52A393232728551A001D7959 /* ParticipantCell.swift in Sources */,
 				52D8AB812717D49400009B9D /* SignInViewController.swift in Sources */,
 				52B908D02726A862008FE4E2 /* Birdhouse+String.swift in Sources */,
 				52B908D22726A86A008FE4E2 /* Birdhouse+UIView.swift in Sources */,
