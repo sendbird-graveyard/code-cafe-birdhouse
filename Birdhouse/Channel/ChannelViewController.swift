@@ -30,9 +30,11 @@ class ChannelViewController: UIViewController {
         
         titleLabel.text = room.title
         
+        // MARK: - Set Room Delegate
         room.addDelegate(self, identifier: room.roomId)
     }
     
+    // MARK: - Exit a Room
     @IBAction func leave(_ sender: Any) {
         do {
             try room.exit()
@@ -64,6 +66,7 @@ class ChannelViewController: UIViewController {
     }
     
     @IBAction func showChat(_ sender: Any) {
+        // MARK: - Show Chat using UIKit
         let viewController = SBUChannelViewController(channelUrl: room.roomId, messageListParams: nil)
         self.present(viewController, animated: true, completion: nil)
     }
@@ -83,6 +86,7 @@ extension ChannelViewController: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "participant", for: indexPath) as! ParticipantCell
         
+        // MARK: - Show Participant Cell
         let participant = room.participants[indexPath.row]
         cell.participant = participant
         

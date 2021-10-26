@@ -17,9 +17,9 @@
 		52A3931F272841CC001D7959 /* Gellix-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52A39316272841CC001D7959 /* Gellix-Medium.otf */; };
 		52A39320272841CC001D7959 /* Gellix-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52A39317272841CC001D7959 /* Gellix-SemiBold.otf */; };
 		52A393232728551A001D7959 /* ParticipantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A393222728551A001D7959 /* ParticipantCell.swift */; };
+		52A3932527285A12001D7959 /* Birdhouse+Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A3932427285A12001D7959 /* Birdhouse+Room.swift */; };
 		52B908D02726A862008FE4E2 /* Birdhouse+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B908CF2726A862008FE4E2 /* Birdhouse+String.swift */; };
 		52B908D22726A86A008FE4E2 /* Birdhouse+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B908D12726A86A008FE4E2 /* Birdhouse+UIView.swift */; };
-		52B908D42726A879008FE4E2 /* ChannelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B908D32726A879008FE4E2 /* ChannelManager.swift */; };
 		52B908D62726A899008FE4E2 /* Birdhouse+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B908D52726A899008FE4E2 /* Birdhouse+UIImageView.swift */; };
 		52D8AB6C2717CE7C00009B9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D8AB6B2717CE7C00009B9D /* AppDelegate.swift */; };
 		52D8AB6E2717CE7C00009B9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D8AB6D2717CE7C00009B9D /* SceneDelegate.swift */; };
@@ -43,9 +43,9 @@
 		52A39317272841CC001D7959 /* Gellix-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gellix-SemiBold.otf"; sourceTree = "<group>"; };
 		52A39318272841CC001D7959 /* Gellix-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gellix-Medium.otf"; path = "../../../../../../Downloads/drive-download-20210706T060923Z-001/Gellix-Medium.otf"; sourceTree = "<group>"; };
 		52A393222728551A001D7959 /* ParticipantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantCell.swift; sourceTree = "<group>"; };
+		52A3932427285A12001D7959 /* Birdhouse+Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Birdhouse+Room.swift"; sourceTree = "<group>"; };
 		52B908CF2726A862008FE4E2 /* Birdhouse+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Birdhouse+String.swift"; sourceTree = "<group>"; };
 		52B908D12726A86A008FE4E2 /* Birdhouse+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Birdhouse+UIView.swift"; sourceTree = "<group>"; };
-		52B908D32726A879008FE4E2 /* ChannelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelManager.swift; sourceTree = "<group>"; };
 		52B908D52726A899008FE4E2 /* Birdhouse+UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Birdhouse+UIImageView.swift"; sourceTree = "<group>"; };
 		52D8AB682717CE7C00009B9D /* Birdhouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Birdhouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D8AB6B2717CE7C00009B9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				52B908CF2726A862008FE4E2 /* Birdhouse+String.swift */,
+				52A3932427285A12001D7959 /* Birdhouse+Room.swift */,
 				52B908D12726A86A008FE4E2 /* Birdhouse+UIView.swift */,
 				52B908D52726A899008FE4E2 /* Birdhouse+UIImageView.swift */,
 			);
@@ -124,13 +125,12 @@
 			children = (
 				52D8AB6B2717CE7C00009B9D /* AppDelegate.swift */,
 				52D8AB6D2717CE7C00009B9D /* SceneDelegate.swift */,
-				52B908D32726A879008FE4E2 /* ChannelManager.swift */,
-				52A3930F272841B7001D7959 /* Resources */,
-				52B908CE2726A851008FE4E2 /* Extensions */,
 				52D8AB852717D54D00009B9D /* Channel */,
 				52D8AB822717D4A400009B9D /* ChannelList */,
 				52D8AB7F2717D47C00009B9D /* SignIn */,
 				52E44755271DDE5C00547030 /* View */,
+				52B908CE2726A851008FE4E2 /* Extensions */,
+				52A3930F272841B7001D7959 /* Resources */,
 				52D8AB742717CE8000009B9D /* Assets.xcassets */,
 				52D8AB792717CE8000009B9D /* Info.plist */,
 			);
@@ -320,9 +320,9 @@
 				52D8AB6C2717CE7C00009B9D /* AppDelegate.swift in Sources */,
 				52D8AB6E2717CE7C00009B9D /* SceneDelegate.swift in Sources */,
 				52B908D62726A899008FE4E2 /* Birdhouse+UIImageView.swift in Sources */,
+				52A3932527285A12001D7959 /* Birdhouse+Room.swift in Sources */,
 				52D8AB872717D55800009B9D /* ChannelViewController.swift in Sources */,
 				52D8AB842717D4B100009B9D /* ChannelListViewController.swift in Sources */,
-				52B908D42726A879008FE4E2 /* ChannelManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

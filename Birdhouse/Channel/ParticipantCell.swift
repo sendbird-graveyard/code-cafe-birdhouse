@@ -26,6 +26,7 @@ class ParticipantCell: UICollectionViewCell {
         self.participant = nil
     }
     
+    // MARK: - Configure Cell with Participant information
     func updateView(with participant: Participant) {
         userIdLabel.text = "\(participant.user.nickname?.collapsed ?? participant.user.userId)"
         audioMutedImageView.isHidden = participant.isAudioEnabled

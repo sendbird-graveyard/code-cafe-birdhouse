@@ -19,28 +19,17 @@ class SignInViewController: UIViewController {
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 8, height: userIdTextField.frame.height))
         userIdTextField.leftView = paddingView
         userIdTextField.leftViewMode = .always
-        // Do any additional setup after loading the view.
     }
-    
 
     @IBAction func signIn(_ sender: Any) {
         guard let userId = userIdTextField.text else { return }
-        SendBirdCall.authenticate(with: .init(userId: userId)) { callUser, callError in
-            SBDMain.connect(withUserId: userId) { chatUser, chatError in
-                guard let callUser = callUser, callError == nil else { return }
-                guard let chatUser = chatUser, chatError == nil else { return }
+        // MARK: - Authenticate with Sendbird
+        SendBirdCall.authenticate(with: .init(userId: userId)) { _, callError in
+            SBDMain.connect(withUserId: userId) { _, chatError in
+                guard callError == nil, chatError == nil else { return }
+                
                 self.performSegue(withIdentifier: "login", sender: nil)
             }
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

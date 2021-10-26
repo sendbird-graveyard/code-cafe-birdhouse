@@ -18,56 +18,16 @@ class ChannelListViewController: UIViewController {
     var rooms: [Room] = []
     var query: RoomListQuery?
     
-    func loadChannels(completionHandler: (() -> Void)? = nil) {
-        guard let query = query ?? createRoomQuery() else {
-            assertionFailure("Cannot create room query because SendBirdCalls SDK is not connected.")
-            return
-        }
-        
-        guard !query.isLoading, query.hasNext else { return }
-        query.next { rooms, error in
-            guard let rooms = rooms else { return }
-            
-            self.rooms.append(contentsOf: rooms)
-            
-            completionHandler?()
-        }
-    }
-    
-    @discardableResult
-    func createRoomQuery() -> RoomListQuery? {
-        let params = RoomListQuery.Params()
-            .setType(.largeRoomForAudioOnly)
-            .setState(.open)
-        query = SendBirdCall.createRoomListQuery(with: params)
-        return query
-    }
-    
-    func createRoom(title: String, completionHandler: ((Room) -> Void)?) {
-        let params = RoomParams(roomType: .largeRoomForAudioOnly)
-        SendBirdCall.createRoom(with: params) { room, error in
-            guard let room = room, error == nil else {
-                return
-            }
-            
-            let channelParams = SBDGroupChannelParams()
-            channelParams.channelUrl = room.roomId
-            channelParams.isPublic = true
-            SBDGroupChannel.createChannel(with: channelParams) { groupChannel, error in
-                guard let groupChannel = groupChannel, error == nil else { return }
-                
-                self.rooms.insert(room, at: 0)
-                self.tableView.reloadData()
-                completionHandler?(room)
-            }
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.delegate = self
         tableView.dataSource = self
+        
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshRoomList(sender:)), for: .valueChanged)
+        refreshControl.attributedTitle = .init(string: "Reloading room list...")
+        tableView.refreshControl = refreshControl
         
         let logOut = UIAction(title: "Log out", attributes: .destructive) { _ in
             self.rooms.removeAll()
@@ -81,16 +41,12 @@ class ChannelListViewController: UIViewController {
             children: [logOut]
         )
         
-        loadChannels {
-            self.tableView.reloadData()
-        }
+        loadChannels()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        loadChannels {
-            self.tableView.reloadData()
-        }
+        loadChannels()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -100,6 +56,7 @@ class ChannelListViewController: UIViewController {
         }
     }
     
+    // MARK: - Create Room
     @IBAction func createRoom(_ sender: Any) {
         let alert = UIAlertController(title: "Create a room", message: nil, preferredStyle: .alert)
         alert.addTextField { textField in
@@ -110,7 +67,6 @@ class ChannelListViewController: UIViewController {
             let name = textField.text ?? "Audio Room"
 
             self.createRoom(title: name) { room in
-                self.tableView.reloadData()
                 self.enterRoom(room: room)
             }
         }))
@@ -118,61 +74,29 @@ class ChannelListViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
 
         self.present(alert, animated: true, completion: nil)
-        
-//        let params = RoomParams(roomType: .largeRoomForAudioOnly)
-//        SendBirdCall.createRoom(with: params) { room, error in
-//            guard let room = room, error == nil else {
-//                return
-//            }
-//
-//            let channelParams = SBDGroupChannelParams()
-//            channelParams.channelUrl = room.roomId
-//            SBDGroupChannel.createChannel(with: channelParams) { groupChannel, error in
-//                guard let groupChannel = groupChannel, error == nil else { return }
-//
-//                self.rooms.append(room)
-//                self.tableView.reloadData()
-//            }
-//        }
     }
-//
-//    func loadChannels(completionHandler: (([Room]?, Error?) -> Void)? = nil) {
-//        guard let query = query ?? createRoomQuery() else {
-//            assertionFailure("Cannot create room query because SendBirdCalls SDK is not connected.")
-//            return
-//        }
-//
-//        query.next { rooms, error in
-//            if let rooms = rooms {
-//                self.rooms.append(contentsOf: rooms)
-//            }
-//            completionHandler?(rooms, error)
-//        }
-//    }
-//
-//    func createRoomQuery() -> RoomListQuery? {
-//        let params = RoomListQuery.Params()
-//            .setType(.largeRoomForAudioOnly)
-//            .setState(.open)
-//        query = SendBirdCall.createRoomListQuery(with: params)
-//        return query
-//    }
-////
-//    func loadChannelList(resultHandler: @escaping (Result<[SBDGroupChannel], Error>) -> Void) {
-//        // TODO: Init SBDGroupChannelListQuery
-//        channelListQuery = SBDGroupChannel.createPublicGroupChannelListQuery()
-//
-//        channelListQuery?.channelUrlsFilter = self.rooms.compactMap { $0.roomId }
-//        channelListQuery?.limit = 20
-//        channelListQuery?.loadNextPage { channels, error in
-//            if let error = error {
-//                resultHandler(.failure(error))
-//                return
-//            }
-//            resultHandler(.success(channels ?? []))
-//        }
-//    }
     
+    func createRoom(title: String, completionHandler: ((Room) -> Void)?) {
+        let params = RoomParams(roomType: .largeRoomForAudioOnly)
+        SendBirdCall.createRoom(with: params) { room, error in
+            guard let room = room, error == nil else {
+                return
+            }
+            
+            let channelParams = SBDGroupChannelParams()
+            channelParams.channelUrl = room.roomId
+            channelParams.isPublic = true
+            SBDGroupChannel.createChannel(with: channelParams) { groupChannel, error in
+                guard groupChannel != nil, error == nil else { return }
+                
+                self.rooms.insert(room, at: 0)
+                self.tableView.reloadData()
+                completionHandler?(room)
+            }
+        }
+    }
+    
+    // MARK: - Enter Room
     func enterRoom(room: Room) {
         let params = Room.EnterParams()
         room.enter(with: params) { roomError in
@@ -180,11 +104,47 @@ class ChannelListViewController: UIViewController {
             self.performSegue(withIdentifier: "joinRoom", sender: room)
         }
     }
+    
+    // MARK: - Query Room
+    @discardableResult
+    func createRoomQuery() -> RoomListQuery? {
+        let params = RoomListQuery.Params()
+            .setType(.largeRoomForAudioOnly)
+            .setState(.open)
+        query = SendBirdCall.createRoomListQuery(with: params)
+        return query
+    }
+    
+    func loadChannels(completionHandler: (() -> Void)? = nil) {
+        guard let query = query ?? createRoomQuery() else {
+            assertionFailure("Cannot create room query because SendBirdCalls SDK is not connected.")
+            return
+        }
+        
+        guard !query.isLoading, query.hasNext else { return }
+        query.next { rooms, error in
+            guard let rooms = rooms else { return }
+            
+            self.rooms.append(contentsOf: rooms)
+            self.tableView.reloadData()
+            completionHandler?()
+        }
+    }
+    
+    @objc
+    func refreshRoomList(sender: UIRefreshControl) {
+        rooms.removeAll()
+        query = nil
+        tableView.reloadData()
+        loadChannels {
+            sender.endRefreshing()
+        }
+    }
 }
 
 extension ChannelListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return rooms.count// rooms.count
+        return rooms.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -208,12 +168,13 @@ extension ChannelListViewController: UITableViewDataSource, UITableViewDelegate 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 65 + CGFloat(rooms[indexPath.row].participants.count * 12)
     }
-   
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        guard indexPath.row > rooms.count - 1 else { return }
-        loadChannels {
-            print("Reloading again")
-            tableView.reloadData()
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        
+        if offsetY > contentHeight - scrollView.frame.height {
+            loadChannels()
         }
     }
 }
