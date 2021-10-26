@@ -27,12 +27,13 @@ class ChannelTableViewCell: UITableViewCell {
         didSet {    
 //            setupUI()
             // ParticipantStackView
-            room!.participants.forEach { participant in
+            //room!.participants.forEach { participant in
+            for participant in ["hey", "ho", "this is noce", "good"] {
                 if participantStackView.arrangedSubviews.count <= 4 {
                     let label = UILabel()
-                    label.text = participant.user.nickname?.collapsed ?? participant.user.userId
-                    label.font = .preferredFont(forTextStyle: .footnote)
-                    
+                    label.text = participant// .user.nickname?.collapsed ?? participant.user.userId
+                    label.font = UIFont(name: "Gellix-SemiBold", size: 13)
+                    label.sizeToFit()
                     participantStackView.addArrangedSubview(label)
                 }
             }
@@ -40,32 +41,31 @@ class ChannelTableViewCell: UITableViewCell {
             
             // Participants count
             participantCountLabel.text = String(room!.participants.count)
+            channelTitleLabel.text = room?.title
 //            loadChannel()
         }
     }
-    // MARK: Channel
-    var channel: SBDGroupChannel? {
-        didSet {
-            
-                if let coverURL = channel?.coverUrl {
-                    coverImageView.updateImage(urlString: coverURL)
-                }
-                
-                channelTitleLabel.text = channel!.name
-                
-//            setupUI()
-//            updateUI()
-        }
-    }
+//    // MARK: Channel
+//    var channel: SBDGroupChannel? {
+//        didSet {
+//
+//                if let coverURL = channel?.coverUrl {
+//                    coverImageView.updateImage(urlString: coverURL)
+//                }
+//
+//
+//
+////            setupUI()
+////            updateUI()
+//        }
+//    }
     
     override func prepareForReuse() {
         super.prepareForReuse()
         
         participantStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
-        coverImageView.image = nil
+//        coverImageView.image = nil
     }
-    
-    var channelQuery: SBDPublicGroupChannelListQuery?
     
 //    func loadChannel() {
 //        guard let room = room else { return }

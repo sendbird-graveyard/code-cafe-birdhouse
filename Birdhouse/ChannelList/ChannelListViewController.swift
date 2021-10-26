@@ -33,14 +33,15 @@ class ChannelListViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        let logOut = UIAction(title: "Log out") { _ in
+        
+        let logOut = UIAction(title: "Log out", attributes: .destructive) { _ in
             ChannelManager.shared.resetChannels()
             self.performSegue(withIdentifier: "logout", sender: nil)
         }
         
 //        tableView.register(ChannelTableViewCell.self, forCellReuseIdentifier: ChannelTableViewCell.identifier)
-        tableView.register(UINib(nibName: "ChannelTableViewCell", bundle: nil), forCellReuseIdentifier: ChannelTableViewCell.identifier)
-        settingsButton.menu = UIMenu(title: "", options: .displayInline, children: [logOut])
+//        tableView.register(UINib(nibName: "ChannelTableViewCell", bundle: nil), forCellReuseIdentifier: ChannelTableViewCell.identifier)
+        settingsButton.menu = UIMenu(title: SendBirdCall.currentUser?.userId ?? "", options: .displayInline, children: [logOut])
         
         ChannelManager.shared.loadChannels { _, _ in
             self.tableView.reloadData()
@@ -57,9 +58,9 @@ class ChannelListViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? ChannelViewController,
-           let (room, channel) = sender as? (Room, SBDGroupChannel) {
+           let room = sender as? Room {
             destination.room = room
-            destination.channel = channel
+//            destination.channel = channel
         }
     }
     
@@ -71,8 +72,9 @@ class ChannelListViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Create", style: .default, handler: { [weak alert] _ in
             let textField = alert!.textFields![0]
             let name = textField.text ?? "Audio Room"
-            ChannelManager.shared.createRoom(title: name) {
+            ChannelManager.shared.createRoom(title: name) { room in
                 self.tableView.reloadData()
+                self.enterRoom(room: room)
             }
         }))
         
@@ -143,31 +145,24 @@ extension ChannelListViewController: UITableViewDataSource, UITableViewDelegate 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ChannelTableViewCell.identifier, for: indexPath) as! ChannelTableViewCell
         
-        let roomChannel = ChannelManager.shared.getChannel(index: indexPath.row)
-        guard let (room, channel) = roomChannel else {
-            return UITableViewCell()
-        }
-
-//        let room = rooms[indexPath.row]
+        let room = ChannelManager.shared.getRoom(index: indexPath.row)
         
         cell.room = room
-        cell.channel = channel
+//        cell.channel = channel
         
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let roomChannel = ChannelManager.shared.getChannel(index: indexPath.row)
-        guard let (room, channel) = roomChannel else {
-            return //UITableViewCell()
-        }
-        //        let room = rooms[indexPath.row]
-        
+        let room = ChannelManager.shared.getRoom(index: indexPath.row)
+        enterRoom(room: room)
+    }
+    
+    func enterRoom(room: Room) {
         let params = Room.EnterParams()
         room.enter(with: params) { roomError in
-            //            SBDGroupChannel.getWithUrl(room.roomId) { channel, channelError in
             guard roomError == nil else { return }
-            self.performSegue(withIdentifier: "joinRoom", sender: (room, channel))
+            self.performSegue(withIdentifier: "joinRoom", sender: room)
         }
     }
     
@@ -176,6 +171,6 @@ extension ChannelListViewController: UITableViewDataSource, UITableViewDelegate 
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 132
+        return 55 + 4 * 12
     }
 }

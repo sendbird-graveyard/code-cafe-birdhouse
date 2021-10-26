@@ -19,7 +19,6 @@ class ChannelManager {
     static let shared = ChannelManager()
     
     var rooms: [Room] = []
-    var channels: [String: SBDGroupChannel] = [:]
     
     var query: RoomListQuery?
     
@@ -29,18 +28,13 @@ class ChannelManager {
     
     func resetChannels() {
         self.rooms = []
-        self.channels = [:]
         self.query = createRoomQuery()
     }
     
-    func getChannel(index: Int) -> (Room, SBDGroupChannel)? {
-        let room = rooms[index]
-        guard let channel = channels[room.roomId] else {
-            return nil
-        }
-        
-        return (room, channel)
+    func getRoom(index: Int) -> Room {
+        return rooms[index]
     }
+    
     func getChannel(_ channelId: String, completionHandler: (((Room, SBDGroupChannel)?, Error?) -> Void)?) {
         let room = SendBirdCall.getCachedRoom(by: channelId)
         SBDGroupChannel.getWithUrl(channelId) { channel, error in
@@ -64,23 +58,7 @@ class ChannelManager {
             
             self.rooms.append(contentsOf: rooms)
             
-            let mutex = DispatchSemaphore(value: 1)
-            let group = DispatchGroup()
-            for room in rooms {
-                SBDGroupChannel.getWithUrl(room.roomId) { channel, error in
-                    defer { group.leave() }
-                    guard let channel = channel, error == nil else { return }
-                    self.channels[room.roomId] = channel
-//                    mutex.signal()
-                }
-                group.enter()
-//                mutex.wait()
-            }
-            group.notify(queue: DispatchQueue.global(qos: .userInteractive)) {
-                DispatchQueue.main.async {
-                completionHandler?(rooms, error)
-                }
-            }
+            completionHandler?(rooms, error)
         }
     }
     
@@ -92,7 +70,7 @@ class ChannelManager {
         return query
     }
     
-    func createRoom(title: String, completionHandler: (() -> Void)?) {
+    func createRoom(title: String, completionHandler: ((Room) -> Void)?) {
         let params = RoomParams(roomType: .largeRoomForAudioOnly)
         SendBirdCall.createRoom(with: params) { room, error in
             guard let room = room, error == nil else {
@@ -106,8 +84,7 @@ class ChannelManager {
                 guard let groupChannel = groupChannel, error == nil else { return }
                 
                 self.rooms.append(room)
-                self.channels[room.roomId] = groupChannel
-                completionHandler?()
+                completionHandler?(room)
 //                self.tableView.reloadData()
             }
         }

@@ -15,7 +15,10 @@ class SignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 8, height: userIdTextField.frame.height))
+        userIdTextField.leftView = paddingView
+        userIdTextField.leftViewMode = .always
         // Do any additional setup after loading the view.
     }
     

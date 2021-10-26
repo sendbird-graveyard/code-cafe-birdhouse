@@ -20,4 +20,47 @@ extension UIView {
             }
         }
     }
+    
+    @IBInspectable
+    var shadowRadius: CGFloat {
+        get {
+            layer.shadowRadius
+        }
+        set {
+            layer.shadowRadius = newValue
+        }
+    }
+    
+    @IBInspectable
+    var shadowOffset: CGSize {
+        get {
+            layer.shadowOffset
+        }
+        set {
+            layer.shadowOffset = newValue
+        }
+    }
+    
+    @IBInspectable
+    var shadowOpacity: Float {
+        get {
+            layer.shadowOpacity
+        }
+        set {
+            layer.shadowOpacity = newValue
+        }
+    }
+    
+    @IBInspectable
+    var shadowColor: UIColor? {
+        get {
+            if let color = layer.shadowColor {
+                return UIColor(cgColor: color)
+            }
+            return nil
+        }
+        set {
+            layer.shadowColor = newValue?.cgColor
+        }
+    }
 }

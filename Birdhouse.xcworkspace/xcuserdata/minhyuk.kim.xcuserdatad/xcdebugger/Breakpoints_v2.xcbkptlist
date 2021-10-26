@@ -14,10 +14,10 @@
             filePath = "Birdhouse/ChannelList/ChannelTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "channel"
-            landmarkType = "24">
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "ChannelTableViewCell"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -30,102 +30,26 @@
             filePath = "Birdhouse/ChannelList/ChannelTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "room"
             landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "9FF22401-81B2-4431-8732-1FE7546B0282 - 33d62731963bb12b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Birdhouse.ChannelTableViewCell.room.getter : Swift.Optional&lt;SendBirdCalls.Room&gt;"
-                  moduleName = "Birdhouse"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/minhyuk.kim/Desktop/Sendbird/Code%20Cafe/Birdhouse/Birdhouse/ChannelList/ChannelTableViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "94">
-               </Location>
-               <Location
-                  uuid = "9FF22401-81B2-4431-8732-1FE7546B0282 - 3793a6d297b95f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Birdhouse.ChannelTableViewCell.room.setter : Swift.Optional&lt;SendBirdCalls.Room&gt;"
-                  moduleName = "Birdhouse"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/minhyuk.kim/Desktop/Sendbird/Code%20Cafe/Birdhouse/Birdhouse/ChannelList/ChannelTableViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "137">
-               </Location>
-               <Location
-                  uuid = "9FF22401-81B2-4431-8732-1FE7546B0282 - 9e85123000a9bb2d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Birdhouse.ChannelTableViewCell.room.modify : Swift.Optional&lt;SendBirdCalls.Room&gt;"
-                  moduleName = "Birdhouse"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/minhyuk.kim/Desktop/Sendbird/Code%20Cafe/Birdhouse/Birdhouse/ChannelList/ChannelTableViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "27">
-               </Location>
-               <Location
-                  uuid = "9FF22401-81B2-4431-8732-1FE7546B0282 - 10b876272d729504"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Birdhouse.ChannelTableViewCell.room.modify : Swift.Optional&lt;SendBirdCalls.Room&gt; with unmangled suffix &quot;.resume.0&quot;"
-                  moduleName = "Birdhouse"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/minhyuk.kim/Desktop/Sendbird/Code%20Cafe/Birdhouse/Birdhouse/ChannelList/ChannelTableViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "17">
-               </Location>
-               <Location
-                  uuid = "9FF22401-81B2-4431-8732-1FE7546B0282 - 58d91aa162046e08"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Birdhouse.ChannelTableViewCell.init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; Birdhouse.ChannelTableViewCell"
-                  moduleName = "Birdhouse"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/minhyuk.kim/Desktop/Sendbird/Code%20Cafe/Birdhouse/Birdhouse/ChannelList/ChannelTableViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "349">
-               </Location>
-               <Location
-                  uuid = "9FF22401-81B2-4431-8732-1FE7546B0282 - a5df0b0b71274469"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Birdhouse.ChannelTableViewCell.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Birdhouse.ChannelTableViewCell&gt;"
-                  moduleName = "Birdhouse"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/minhyuk.kim/Desktop/Sendbird/Code%20Cafe/Birdhouse/Birdhouse/ChannelList/ChannelTableViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "306">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "79B9766A-D482-4194-A25F-A9AA9B159738"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Birdhouse/Channel/ChannelViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
+            landmarkName = "updateView(with:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

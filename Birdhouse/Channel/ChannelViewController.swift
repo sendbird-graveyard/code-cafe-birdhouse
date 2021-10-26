@@ -15,7 +15,7 @@ class ChannelViewController: UIViewController {
     @IBOutlet var titleLabel: UILabel!
     
     var room: Room!
-    var channel: SBDGroupChannel!
+//    var channel: SBDGroupChannel!
     
     var localParticipantIndex: [IndexPath] {
         if let index = self.room.participants.firstIndex(where: { $0 is LocalParticipant }) {
@@ -30,8 +30,8 @@ class ChannelViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         
-        titleLabel.text = channel.name
-        
+        titleLabel.text = room.title
+        room.addDelegate(self, identifier: room.roomId)
 //        let vc = SBUChannelViewController(channelUrl: channel.channelUrl)
 //        self.present(vc, animated: true, completion: nil)
     }
@@ -49,10 +49,10 @@ class ChannelViewController: UIViewController {
     @IBAction func muteMicrophone(_ sender: UIButton) {
         if room.localParticipant?.isAudioEnabled == true {
             room.localParticipant?.muteMicrophone()
-            sender.setImage(.init(systemName: "mic"), for: .normal)
+            sender.setImage(.init(systemName: "mic.slash.fill", withConfiguration: UIImage.SymbolConfiguration(scale: .large)), for: .normal)
         } else {
             room.localParticipant?.unmuteMicrophone()
-            sender.setImage(.init(systemName: "mic.slash"), for: .normal)
+            sender.setImage(.init(systemName: "mic.fill", withConfiguration: UIImage.SymbolConfiguration(scale: .large)), for: .normal)
         }
         UIView.performWithoutAnimation {
             collectionView.reloadItems(at: localParticipantIndex)
@@ -60,7 +60,7 @@ class ChannelViewController: UIViewController {
     }
     
     @IBAction func showChat(_ sender: Any) {
-        let viewController = SBUChannelViewController(channelUrl: channel.channelUrl, messageListParams: nil)
+        let viewController = SBUChannelViewController(channelUrl: room.roomId, messageListParams: nil)
         self.present(viewController, animated: true, completion: nil)
     }
     /*
@@ -82,7 +82,6 @@ extension ChannelViewController: RoomDelegate {
     func didRemoteParticipantEnter(_ participant: RemoteParticipant) {
         collectionView.reloadData()
     }
-    
 }
 
 extension ChannelViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

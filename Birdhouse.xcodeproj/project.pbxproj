@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0E8144584DB8809B6430C717 /* Pods_Birdhouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECE7DE0AD5F94A53D96FDBAF /* Pods_Birdhouse.framework */; };
+		52A39319272841CC001D7959 /* Gellix-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52A39310272841CC001D7959 /* Gellix-ExtraBold.otf */; };
+		52A3931A272841CC001D7959 /* Gellix-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52A39311272841CC001D7959 /* Gellix-Light.otf */; };
+		52A3931B272841CC001D7959 /* Gellix-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52A39312272841CC001D7959 /* Gellix-Thin.otf */; };
+		52A3931C272841CC001D7959 /* Gellix-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52A39313272841CC001D7959 /* Gellix-Black.otf */; };
+		52A3931D272841CC001D7959 /* Gellix-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52A39314272841CC001D7959 /* Gellix-Bold.otf */; };
+		52A3931E272841CC001D7959 /* Gellix-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52A39315272841CC001D7959 /* Gellix-Regular.otf */; };
+		52A3931F272841CC001D7959 /* Gellix-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52A39316272841CC001D7959 /* Gellix-Medium.otf */; };
+		52A39320272841CC001D7959 /* Gellix-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52A39317272841CC001D7959 /* Gellix-SemiBold.otf */; };
 		52B908D02726A862008FE4E2 /* Birdhouse+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B908CF2726A862008FE4E2 /* Birdhouse+String.swift */; };
 		52B908D22726A86A008FE4E2 /* Birdhouse+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B908D12726A86A008FE4E2 /* Birdhouse+UIView.swift */; };
 		52B908D42726A879008FE4E2 /* ChannelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B908D32726A879008FE4E2 /* ChannelManager.swift */; };
@@ -21,10 +29,18 @@
 		52D8AB842717D4B100009B9D /* ChannelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D8AB832717D4B100009B9D /* ChannelListViewController.swift */; };
 		52D8AB872717D55800009B9D /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D8AB862717D55800009B9D /* ChannelViewController.swift */; };
 		52E44757271DDE7200547030 /* ChannelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E44756271DDE7200547030 /* ChannelTableViewCell.swift */; };
-		52E44759271DDEAC00547030 /* ChannelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52E44758271DDEAC00547030 /* ChannelTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52A39310272841CC001D7959 /* Gellix-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gellix-ExtraBold.otf"; sourceTree = "<group>"; };
+		52A39311272841CC001D7959 /* Gellix-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gellix-Light.otf"; sourceTree = "<group>"; };
+		52A39312272841CC001D7959 /* Gellix-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gellix-Thin.otf"; sourceTree = "<group>"; };
+		52A39313272841CC001D7959 /* Gellix-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gellix-Black.otf"; sourceTree = "<group>"; };
+		52A39314272841CC001D7959 /* Gellix-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gellix-Bold.otf"; sourceTree = "<group>"; };
+		52A39315272841CC001D7959 /* Gellix-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gellix-Regular.otf"; sourceTree = "<group>"; };
+		52A39316272841CC001D7959 /* Gellix-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gellix-Medium.otf"; sourceTree = "<group>"; };
+		52A39317272841CC001D7959 /* Gellix-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gellix-SemiBold.otf"; sourceTree = "<group>"; };
+		52A39318272841CC001D7959 /* Gellix-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gellix-Medium.otf"; path = "../../../../../../Downloads/drive-download-20210706T060923Z-001/Gellix-Medium.otf"; sourceTree = "<group>"; };
 		52B908CF2726A862008FE4E2 /* Birdhouse+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Birdhouse+String.swift"; sourceTree = "<group>"; };
 		52B908D12726A86A008FE4E2 /* Birdhouse+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Birdhouse+UIView.swift"; sourceTree = "<group>"; };
 		52B908D32726A879008FE4E2 /* ChannelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelManager.swift; sourceTree = "<group>"; };
@@ -40,7 +56,6 @@
 		52D8AB832717D4B100009B9D /* ChannelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListViewController.swift; sourceTree = "<group>"; };
 		52D8AB862717D55800009B9D /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		52E44756271DDE7200547030 /* ChannelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTableViewCell.swift; sourceTree = "<group>"; };
-		52E44758271DDEAC00547030 /* ChannelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChannelTableViewCell.xib; sourceTree = "<group>"; };
 		6C24160972CCA1E29FA065E0 /* Pods-Birdhouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Birdhouse.debug.xcconfig"; path = "Target Support Files/Pods-Birdhouse/Pods-Birdhouse.debug.xcconfig"; sourceTree = "<group>"; };
 		B19A8907FA1742250194DDB9 /* Pods-Birdhouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Birdhouse.release.xcconfig"; path = "Target Support Files/Pods-Birdhouse/Pods-Birdhouse.release.xcconfig"; sourceTree = "<group>"; };
 		ECE7DE0AD5F94A53D96FDBAF /* Pods_Birdhouse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Birdhouse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +73,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52A3930F272841B7001D7959 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				52A39313272841CC001D7959 /* Gellix-Black.otf */,
+				52A39314272841CC001D7959 /* Gellix-Bold.otf */,
+				52A39310272841CC001D7959 /* Gellix-ExtraBold.otf */,
+				52A39311272841CC001D7959 /* Gellix-Light.otf */,
+				52A39318272841CC001D7959 /* Gellix-Medium.otf */,
+				52A39316272841CC001D7959 /* Gellix-Medium.otf */,
+				52A39315272841CC001D7959 /* Gellix-Regular.otf */,
+				52A39317272841CC001D7959 /* Gellix-SemiBold.otf */,
+				52A39312272841CC001D7959 /* Gellix-Thin.otf */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		52B908CE2726A851008FE4E2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +123,7 @@
 				52D8AB6B2717CE7C00009B9D /* AppDelegate.swift */,
 				52D8AB6D2717CE7C00009B9D /* SceneDelegate.swift */,
 				52B908D32726A879008FE4E2 /* ChannelManager.swift */,
+				52A3930F272841B7001D7959 /* New Group */,
 				52B908CE2726A851008FE4E2 /* Extensions */,
 				52D8AB852717D54D00009B9D /* Channel */,
 				52D8AB822717D4A400009B9D /* ChannelList */,
@@ -116,7 +148,6 @@
 			children = (
 				52D8AB832717D4B100009B9D /* ChannelListViewController.swift */,
 				52E44756271DDE7200547030 /* ChannelTableViewCell.swift */,
-				52E44758271DDEAC00547030 /* ChannelTableViewCell.xib */,
 			);
 			path = ChannelList;
 			sourceTree = "<group>";
@@ -216,9 +247,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				52D8AB782717CE8000009B9D /* LaunchScreen.storyboard in Resources */,
-				52E44759271DDEAC00547030 /* ChannelTableViewCell.xib in Resources */,
+				52A3931D272841CC001D7959 /* Gellix-Bold.otf in Resources */,
 				52D8AB752717CE8000009B9D /* Assets.xcassets in Resources */,
+				52A3931C272841CC001D7959 /* Gellix-Black.otf in Resources */,
+				52A3931A272841CC001D7959 /* Gellix-Light.otf in Resources */,
+				52A3931F272841CC001D7959 /* Gellix-Medium.otf in Resources */,
+				52A39319272841CC001D7959 /* Gellix-ExtraBold.otf in Resources */,
+				52A39320272841CC001D7959 /* Gellix-SemiBold.otf in Resources */,
 				52D8AB732717CE7C00009B9D /* Main.storyboard in Resources */,
+				52A3931E272841CC001D7959 /* Gellix-Regular.otf in Resources */,
+				52A3931B272841CC001D7959 /* Gellix-Thin.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
