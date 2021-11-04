@@ -6,7 +6,6 @@
 	<string>Please enable microphone access to chat with other users</string>
 	<key>UIAppFonts</key>
 	<array>
-		<string></string>
 		<string>Gellix-Black.otf</string>
 		<string>Gellix-Bold.otf</string>
 		<string>Gellix-Medium.otf</string>

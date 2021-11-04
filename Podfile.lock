@@ -1,10 +1,10 @@
 PODS:
-  - SendBirdCalls (1.7.1):
-    - SendBirdWebRTC (~> 1.3.0)
-  - SendBirdSDK (3.0.234)
-  - SendBirdUIKit (2.1.13):
+  - SendBirdCalls (1.8.0):
+    - SendBirdWebRTC (~> 1.4.0)
+  - SendBirdSDK (3.0.236)
+  - SendBirdUIKit (2.1.14):
     - SendBirdSDK (~> 3.0.226)
-  - SendBirdWebRTC (1.3.0)
+  - SendBirdWebRTC (1.4.0)
 
 DEPENDENCIES:
   - SendBirdCalls
@@ -18,10 +18,10 @@ SPEC REPOS:
     - SendBirdWebRTC
 
 SPEC CHECKSUMS:
-  SendBirdCalls: be9e19414102a27b2f763e52b502074e0e5d5698
-  SendBirdSDK: ca326022470ec61166f352c2e5e0ad7fba28ea91
-  SendBirdUIKit: c79ae04140b823087d0241da958ea5ba33534ee7
-  SendBirdWebRTC: 44b6ccfe52daebbf9941a711408d97b7801fd2de
+  SendBirdCalls: 077ae73f002aa1408fe35d7580b45ed544060a65
+  SendBirdSDK: 17fd66c28e16fd92c10eccbfba2df6100b8dd970
+  SendBirdUIKit: 038502bfdf49c947c4ca210530e75819474470b3
+  SendBirdWebRTC: 385bf08aea051ea4c065303cddbfbe34eca36232
 
 PODFILE CHECKSUM: f237a06c034b7dc83f56c09b0488665de2d7af85
 

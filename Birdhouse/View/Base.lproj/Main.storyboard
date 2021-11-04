@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2GS-fH-c60">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2GS-fH-c60">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -46,16 +47,33 @@
                                 <rect key="frame" x="0.0" y="294.5" width="414" height="411.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYA-3P-3La">
-                                        <rect key="frame" x="143" y="70" width="128.5" height="20.5"/>
+                                        <rect key="frame" x="143" y="70" width="128.5" height="20"/>
                                         <fontDescription key="fontDescription" name="Gellix-SemiBold" family="Gellix" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="User ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KiG-vR-dVk">
-                                        <rect key="frame" x="24" y="124.5" width="366" height="56"/>
+                                        <rect key="frame" x="24" y="124" width="366" height="56"/>
                                         <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="8hZ-0J-Qng"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Gellix-Medium" family="Gellix" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="userIdTextChanged:" destination="2GS-fH-c60" eventType="editingChanged" id="TSP-kz-f4L"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nickname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4ww-60-FN1">
+                                        <rect key="frame" x="24" y="204" width="366" height="56"/>
+                                        <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="HTE-8P-NFn"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Gellix-Medium" family="Gellix" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -73,6 +91,9 @@
                                     <constraint firstItem="KiG-vR-dVk" firstAttribute="centerX" secondItem="NFx-sf-Tf1" secondAttribute="centerX" id="HsZ-H7-0zj"/>
                                     <constraint firstItem="VYA-3P-3La" firstAttribute="top" secondItem="NFx-sf-Tf1" secondAttribute="top" constant="70" id="WLu-vy-uuw"/>
                                     <constraint firstItem="KiG-vR-dVk" firstAttribute="top" secondItem="VYA-3P-3La" secondAttribute="bottom" constant="34" id="YFY-gE-65O"/>
+                                    <constraint firstItem="4ww-60-FN1" firstAttribute="leading" secondItem="NFx-sf-Tf1" secondAttribute="leading" constant="24" id="YtF-ps-ZNR"/>
+                                    <constraint firstAttribute="trailing" secondItem="4ww-60-FN1" secondAttribute="trailing" constant="24" id="dAF-cE-Vdd"/>
+                                    <constraint firstItem="4ww-60-FN1" firstAttribute="top" secondItem="KiG-vR-dVk" secondAttribute="bottom" constant="24" id="hLE-kX-NDJ"/>
                                     <constraint firstItem="KiG-vR-dVk" firstAttribute="leading" secondItem="NFx-sf-Tf1" secondAttribute="leading" constant="24" id="tQf-K8-Bmj"/>
                                 </constraints>
                             </view>
@@ -82,8 +103,14 @@
                                     <constraint firstAttribute="height" constant="56" id="N1S-su-QKt"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Welcome to Birdhouse">
-                                    <fontDescription key="titleFontDescription" name="Gellix-Bold" family="Gellix" pointSize="15"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Welcome to Birdhouse">
+                                            <attributes>
+                                                <font key="NSFont" size="15" name="Gellix-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </buttonConfiguration>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -113,6 +140,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="nicknameTextField" destination="4ww-60-FN1" id="rqN-TH-3wx"/>
                         <outlet property="userIdTextField" destination="KiG-vR-dVk" id="Fos-je-dpH"/>
                         <segue destination="C2e-to-6cl" kind="presentation" identifier="login" modalPresentationStyle="fullScreen" id="2dI-9Y-OEg"/>
                     </connections>
@@ -249,15 +277,20 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="32"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eB-Vs-dke">
-                                        <rect key="frame" x="384" y="5" width="22" height="22"/>
+                                        <rect key="frame" x="376" y="1" width="30" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="22" id="CZh-iw-IUa"/>
+                                            <constraint firstAttribute="width" constant="30" id="CZh-iw-IUa"/>
                                             <constraint firstAttribute="width" secondItem="6eB-Vs-dke" secondAttribute="height" id="MLZ-av-UD0"/>
                                         </constraints>
                                         <state key="normal">
                                             <imageReference key="image" image="person.fill" catalog="system" symbolScale="large"/>
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -276,8 +309,14 @@
                                             <constraint firstAttribute="height" constant="55" id="y6g-Ki-Arh"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Create Room">
-                                            <fontDescription key="titleFontDescription" name="Gellix-SemiBold" family="Gellix" pointSize="15"/>
+                                        <buttonConfiguration key="configuration" style="filled">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Create Room">
+                                                    <attributes>
+                                                        <font key="NSFont" size="15" name="Gellix-SemiBold"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
                                         </buttonConfiguration>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -337,15 +376,17 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="52"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWQ-qb-Tki">
-                                        <rect key="frame" x="24" y="14" width="50.5" height="24.5"/>
-                                        <fontDescription key="fontDescription" name="Gellix-Bold" family="Gellix" pointSize="20"/>
+                                        <rect key="frame" x="24" y="13.5" width="53" height="25.5"/>
+                                        <fontDescription key="fontDescription" name="Gellix-Bold" family="Gellix" pointSize="21"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lrK-rl-4vd">
-                                        <rect key="frame" x="368" y="10.5" width="46" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="bubble.right.fill" catalog="system"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lrK-rl-4vd">
+                                        <rect key="frame" x="379" y="14" width="27" height="24"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="bubble.right.fill" catalog="system" symbolScale="large"/>
+                                        </state>
                                         <connections>
                                             <action selector="showChat:" destination="g6g-i4-YPW" eventType="touchUpInside" id="3bh-bL-jKN"/>
                                         </connections>
@@ -353,7 +394,7 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="lrK-rl-4vd" secondAttribute="trailing" id="2Sp-M1-OEQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="lrK-rl-4vd" secondAttribute="trailing" constant="8" id="2Sp-M1-OEQ"/>
                                     <constraint firstItem="lrK-rl-4vd" firstAttribute="centerY" secondItem="hdq-pg-Tn8" secondAttribute="centerY" id="4Sz-1J-rQt"/>
                                     <constraint firstAttribute="height" constant="52" id="Nyb-bs-6EE"/>
                                     <constraint firstItem="hWQ-qb-Tki" firstAttribute="leading" secondItem="hdq-pg-Tn8" secondAttribute="leading" constant="24" id="dG9-sc-1pe"/>
@@ -370,8 +411,14 @@
                                             <constraint firstAttribute="width" constant="90" id="v3G-mf-IMV"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="tinted" title="Leave">
-                                            <fontDescription key="titleFontDescription" name="Gellix-Bold" family="Gellix" pointSize="17"/>
+                                        <buttonConfiguration key="configuration" style="tinted">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Leave">
+                                                    <attributes>
+                                                        <font key="NSFont" size="17" name="Gellix-Bold"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
                                         </buttonConfiguration>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -443,6 +490,9 @@
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                             <real key="value" value="20"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                            <integer key="value" value="2"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>

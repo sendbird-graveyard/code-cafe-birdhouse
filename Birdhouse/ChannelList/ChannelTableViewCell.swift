@@ -23,7 +23,8 @@ class ChannelTableViewCell: UITableViewCell {
             room.participants.forEach { participant in
                 if participantStackView.arrangedSubviews.count <= 4 {
                     let label = UILabel()
-                    label.text = "✋ \(participant.user.nickname?.collapsed ?? participant.user.userId)"
+                    let audioStatus = participant.isAudioEnabled ? "✋" : "🤫"
+                    label.text = "\(audioStatus) \(participant.user.nickname?.collapsed ?? participant.user.userId)"
                     label.font = UIFont(name: "Gellix-Medium", size: 15)
                     label.textAlignment = .right
                     label.sizeToFit()

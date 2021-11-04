@@ -36,7 +36,7 @@ class ChannelListViewController: UIViewController {
             self.performSegue(withIdentifier: "logout", sender: nil)
         }
         settingsButton.menu = UIMenu(
-            title: SendBirdCall.currentUser?.userId ?? "",
+            title: "User Id: \(SBDMain.getCurrentUser()?.userId ?? "") \n Nickname: \(SBDMain.getCurrentUser()?.nickname ?? "")",
             options: .displayInline,
             children: [logOut]
         )
@@ -78,6 +78,7 @@ class ChannelListViewController: UIViewController {
     
     func createRoom(title: String, completionHandler: ((Room) -> Void)?) {
         let params = RoomParams(roomType: .largeRoomForAudioOnly)
+        params.customItems = ["title": title]
         SendBirdCall.createRoom(with: params) { room, error in
             guard let room = room, error == nil else {
                 return
@@ -85,6 +86,7 @@ class ChannelListViewController: UIViewController {
             
             let channelParams = SBDGroupChannelParams()
             channelParams.channelUrl = room.roomId
+            channelParams.name = title
             channelParams.isPublic = true
             SBDGroupChannel.createChannel(with: channelParams) { groupChannel, error in
                 guard groupChannel != nil, error == nil else { return }
@@ -98,7 +100,7 @@ class ChannelListViewController: UIViewController {
     
     // MARK: - Enter Room
     func enterRoom(room: Room) {
-        let params = Room.EnterParams()
+        let params = Room.EnterParams(isAudioEnabled: false)
         room.enter(with: params) { roomError in
             guard roomError == nil else { return }
             self.performSegue(withIdentifier: "joinRoom", sender: room)

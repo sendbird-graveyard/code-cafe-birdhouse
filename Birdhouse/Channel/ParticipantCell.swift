@@ -32,6 +32,10 @@ class ParticipantCell: UICollectionViewCell {
         audioMutedImageView.isHidden = participant.isAudioEnabled
 
         profileImageView.updateImage(urlString: participant.user.profileURL)
+        
+        if participant is LocalParticipant {
+            profileImageView.layer.borderColor = UIColor.systemPurple.cgColor
+        }
     }
 }
 

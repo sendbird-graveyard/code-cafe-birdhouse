@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		27A19C6488B0F79EC04F0CA6 /* Pods_Birdhouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FCDCA2CF88AC4F99D517FF /* Pods_Birdhouse.framework */; };
+		5204BD7527325A8F0043A7C4 /* Gellix-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52A39314272841CC001D7959 /* Gellix-Bold.otf */; };
+		5204BD7727325C380043A7C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52D8AB742717CE8000009B9D /* Assets.xcassets */; };
 		52A39319272841CC001D7959 /* Gellix-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52A39310272841CC001D7959 /* Gellix-ExtraBold.otf */; };
 		52A3931A272841CC001D7959 /* Gellix-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52A39311272841CC001D7959 /* Gellix-Light.otf */; };
 		52A3931B272841CC001D7959 /* Gellix-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52A39312272841CC001D7959 /* Gellix-Thin.otf */; };
 		52A3931C272841CC001D7959 /* Gellix-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52A39313272841CC001D7959 /* Gellix-Black.otf */; };
-		52A3931D272841CC001D7959 /* Gellix-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52A39314272841CC001D7959 /* Gellix-Bold.otf */; };
 		52A3931E272841CC001D7959 /* Gellix-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52A39315272841CC001D7959 /* Gellix-Regular.otf */; };
 		52A3931F272841CC001D7959 /* Gellix-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52A39316272841CC001D7959 /* Gellix-Medium.otf */; };
 		52A39320272841CC001D7959 /* Gellix-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 52A39317272841CC001D7959 /* Gellix-SemiBold.otf */; };
@@ -24,16 +24,16 @@
 		52D8AB6C2717CE7C00009B9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D8AB6B2717CE7C00009B9D /* AppDelegate.swift */; };
 		52D8AB6E2717CE7C00009B9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D8AB6D2717CE7C00009B9D /* SceneDelegate.swift */; };
 		52D8AB732717CE7C00009B9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52D8AB712717CE7C00009B9D /* Main.storyboard */; };
-		52D8AB752717CE8000009B9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52D8AB742717CE8000009B9D /* Assets.xcassets */; };
 		52D8AB782717CE8000009B9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52D8AB762717CE8000009B9D /* LaunchScreen.storyboard */; };
 		52D8AB812717D49400009B9D /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D8AB802717D49400009B9D /* SignInViewController.swift */; };
 		52D8AB842717D4B100009B9D /* ChannelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D8AB832717D4B100009B9D /* ChannelListViewController.swift */; };
 		52D8AB872717D55800009B9D /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D8AB862717D55800009B9D /* ChannelViewController.swift */; };
 		52E44757271DDE7200547030 /* ChannelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E44756271DDE7200547030 /* ChannelTableViewCell.swift */; };
+		6B914C146E0D2F148F28FAEA /* Pods_Birdhouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84817B1F9E10EB8F7E34D248 /* Pods_Birdhouse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		520EE0C6327B96B637922AC8 /* Pods-Birdhouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Birdhouse.release.xcconfig"; path = "Target Support Files/Pods-Birdhouse/Pods-Birdhouse.release.xcconfig"; sourceTree = "<group>"; };
+		3004941F998812374825CE8E /* Pods-Birdhouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Birdhouse.debug.xcconfig"; path = "Target Support Files/Pods-Birdhouse/Pods-Birdhouse.debug.xcconfig"; sourceTree = "<group>"; };
 		52A39310272841CC001D7959 /* Gellix-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gellix-ExtraBold.otf"; sourceTree = "<group>"; };
 		52A39311272841CC001D7959 /* Gellix-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gellix-Light.otf"; sourceTree = "<group>"; };
 		52A39312272841CC001D7959 /* Gellix-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gellix-Thin.otf"; sourceTree = "<group>"; };
@@ -42,7 +42,6 @@
 		52A39315272841CC001D7959 /* Gellix-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gellix-Regular.otf"; sourceTree = "<group>"; };
 		52A39316272841CC001D7959 /* Gellix-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gellix-Medium.otf"; sourceTree = "<group>"; };
 		52A39317272841CC001D7959 /* Gellix-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gellix-SemiBold.otf"; sourceTree = "<group>"; };
-		52A39318272841CC001D7959 /* Gellix-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gellix-Medium.otf"; path = "../../../../../../Downloads/drive-download-20210706T060923Z-001/Gellix-Medium.otf"; sourceTree = "<group>"; };
 		52A393222728551A001D7959 /* ParticipantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantCell.swift; sourceTree = "<group>"; };
 		52A3932427285A12001D7959 /* Birdhouse+Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Birdhouse+Room.swift"; sourceTree = "<group>"; };
 		52B908CF2726A862008FE4E2 /* Birdhouse+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Birdhouse+String.swift"; sourceTree = "<group>"; };
@@ -59,8 +58,8 @@
 		52D8AB832717D4B100009B9D /* ChannelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListViewController.swift; sourceTree = "<group>"; };
 		52D8AB862717D55800009B9D /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		52E44756271DDE7200547030 /* ChannelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTableViewCell.swift; sourceTree = "<group>"; };
-		878C51D30A9B4E4A9A52291B /* Pods-Birdhouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Birdhouse.debug.xcconfig"; path = "Target Support Files/Pods-Birdhouse/Pods-Birdhouse.debug.xcconfig"; sourceTree = "<group>"; };
-		F8FCDCA2CF88AC4F99D517FF /* Pods_Birdhouse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Birdhouse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84817B1F9E10EB8F7E34D248 /* Pods_Birdhouse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Birdhouse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C6B1742D849B09FAF3739A5 /* Pods-Birdhouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Birdhouse.release.xcconfig"; path = "Target Support Files/Pods-Birdhouse/Pods-Birdhouse.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27A19C6488B0F79EC04F0CA6 /* Pods_Birdhouse.framework in Frameworks */,
+				6B914C146E0D2F148F28FAEA /* Pods_Birdhouse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +81,6 @@
 				52A39314272841CC001D7959 /* Gellix-Bold.otf */,
 				52A39310272841CC001D7959 /* Gellix-ExtraBold.otf */,
 				52A39311272841CC001D7959 /* Gellix-Light.otf */,
-				52A39318272841CC001D7959 /* Gellix-Medium.otf */,
 				52A39316272841CC001D7959 /* Gellix-Medium.otf */,
 				52A39315272841CC001D7959 /* Gellix-Regular.otf */,
 				52A39317272841CC001D7959 /* Gellix-SemiBold.otf */,
@@ -108,7 +106,7 @@
 				52D8AB6A2717CE7C00009B9D /* Birdhouse */,
 				52D8AB692717CE7C00009B9D /* Products */,
 				8AE2D0DF6DA937556C8F23DA /* Pods */,
-				6A38100E8B8E5F71F671E2FC /* Frameworks */,
+				9162830C94E6B0AA02303E3F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,21 +170,21 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		6A38100E8B8E5F71F671E2FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F8FCDCA2CF88AC4F99D517FF /* Pods_Birdhouse.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		8AE2D0DF6DA937556C8F23DA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				878C51D30A9B4E4A9A52291B /* Pods-Birdhouse.debug.xcconfig */,
-				520EE0C6327B96B637922AC8 /* Pods-Birdhouse.release.xcconfig */,
+				3004941F998812374825CE8E /* Pods-Birdhouse.debug.xcconfig */,
+				8C6B1742D849B09FAF3739A5 /* Pods-Birdhouse.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9162830C94E6B0AA02303E3F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84817B1F9E10EB8F7E34D248 /* Pods_Birdhouse.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,11 +194,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52D8AB7C2717CE8000009B9D /* Build configuration list for PBXNativeTarget "Birdhouse" */;
 			buildPhases = (
-				ED45262FD75C5448CEFCF256 /* [CP] Check Pods Manifest.lock */,
+				68F115563B00D516475DB23A /* [CP] Check Pods Manifest.lock */,
 				52D8AB642717CE7C00009B9D /* Sources */,
 				52D8AB652717CE7C00009B9D /* Frameworks */,
 				52D8AB662717CE7C00009B9D /* Resources */,
-				1FCD49D1C202FFE2124BF851 /* [CP] Embed Pods Frameworks */,
+				10EFAD08D6910F1AFD5F65A3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -249,9 +247,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5204BD7727325C380043A7C4 /* Assets.xcassets in Resources */,
+				5204BD7527325A8F0043A7C4 /* Gellix-Bold.otf in Resources */,
 				52D8AB782717CE8000009B9D /* LaunchScreen.storyboard in Resources */,
-				52A3931D272841CC001D7959 /* Gellix-Bold.otf in Resources */,
-				52D8AB752717CE8000009B9D /* Assets.xcassets in Resources */,
 				52A3931C272841CC001D7959 /* Gellix-Black.otf in Resources */,
 				52A3931A272841CC001D7959 /* Gellix-Light.otf in Resources */,
 				52A3931F272841CC001D7959 /* Gellix-Medium.otf in Resources */,
@@ -266,7 +264,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1FCD49D1C202FFE2124BF851 /* [CP] Embed Pods Frameworks */ = {
+		10EFAD08D6910F1AFD5F65A3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -283,7 +281,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Birdhouse/Pods-Birdhouse-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		ED45262FD75C5448CEFCF256 /* [CP] Check Pods Manifest.lock */ = {
+		68F115563B00D516475DB23A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -466,7 +464,7 @@
 		};
 		52D8AB7D2717CE8000009B9D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 878C51D30A9B4E4A9A52291B /* Pods-Birdhouse.debug.xcconfig */;
+			baseConfigurationReference = 3004941F998812374825CE8E /* Pods-Birdhouse.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -480,6 +478,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -495,7 +494,7 @@
 		};
 		52D8AB7E2717CE8000009B9D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 520EE0C6327B96B637922AC8 /* Pods-Birdhouse.release.xcconfig */;
+			baseConfigurationReference = 8C6B1742D849B09FAF3739A5 /* Pods-Birdhouse.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -509,6 +508,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

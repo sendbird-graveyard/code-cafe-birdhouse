@@ -8,7 +8,14 @@
 import SendBirdCalls
 
 extension Room {
-    var title: String? {
-        return "Room"
+    var title: String {
+        get {
+            return customItems["title"] ?? "Unnamed Room"
+        }
+        set {
+            updateCustomItems(customItems: ["title": newValue]) { customItems, updatedKeys, error in
+                print("Updated room title with error: \(String(describing: error))")
+            }
+        }
     }
 }

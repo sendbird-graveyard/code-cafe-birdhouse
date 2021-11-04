@@ -67,8 +67,22 @@ class ChannelViewController: UIViewController {
     
     @IBAction func showChat(_ sender: Any) {
         // MARK: - Show Chat using UIKit
-        let viewController = SBUChannelViewController(channelUrl: room.roomId, messageListParams: nil)
-        self.present(viewController, animated: true, completion: nil)
+        SBDGroupChannel.getWithUrl(room.roomId) { channel, error in
+            guard let channel = channel, error == nil else { return }
+            
+            channel.join { error in
+                guard error == nil else { return }
+
+                self.showUIKit(channel: channel)
+            }
+        }
+    }
+    
+    func showUIKit(channel: SBDGroupChannel) {
+        let viewController = SBUChannelViewController(channel: channel, messageListParams: .init())
+        let navigationController = UINavigationController(rootViewController: viewController)
+        navigationController.modalPresentationStyle = .fullScreen
+        self.present(navigationController, animated: true)
     }
 }
 
@@ -101,5 +115,26 @@ extension ChannelViewController: UICollectionViewDelegate, UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return room.participants.count
+    }
+    
+    // MARK: - Select other users to start a DM
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let participant = room.participants[indexPath.row]
+        guard participant is RemoteParticipant else { return }
+        
+        let controller = UIAlertController(title: participant.user.nickname ?? participant.user.userId, message: nil, preferredStyle: .alert)
+        controller.addAction(UIAlertAction(title: "Direct Message", style: .default, handler: { _ in
+            let params = SBDGroupChannelParams()
+            params.addUserId(participant.user.userId)
+            params.isDistinct = true
+            SBDGroupChannel.createChannel(with: params) { channel, error in
+                guard let channel = channel, error == nil else { return }
+                
+                self.showUIKit(channel: channel)
+            }
+        }))
+        controller.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        self.present(controller, animated: true, completion: nil)
     }
 }
