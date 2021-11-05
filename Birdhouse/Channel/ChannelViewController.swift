@@ -15,11 +15,10 @@ class ChannelViewController: UIViewController {
     
     var room: Room!
     
-    var localParticipantIndex: [IndexPath] {
-        if let index = self.room.participants.firstIndex(where: { $0 is LocalParticipant }) {
-            return [IndexPath(row: index, section: 0)]
-        }
-        return []
+    var localParticipantIndex: IndexPath? {
+        return room.participants
+            .firstIndex(where: { $0 is LocalParticipant })
+            .map { IndexPath(row: $0, section: 0) }
     }
     
     override func viewDidLoad() {
@@ -61,7 +60,7 @@ class ChannelViewController: UIViewController {
         }
         
         UIView.performWithoutAnimation {
-            collectionView.reloadItems(at: localParticipantIndex)
+            collectionView.reloadItems(at: [localParticipantIndex].compactMap { $0 })
         }
     }
     
