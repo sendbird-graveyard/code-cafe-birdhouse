@@ -30,34 +30,17 @@ class ChannelViewController: UIViewController {
         titleLabel.text = room.title
         
         // MARK: - Set Room Delegate
-        room.addDelegate(self, identifier: room.roomId)
+        <#SetRoomDelegate#>
     }
     
     // MARK: - Exit a Room
     @IBAction func leave(_ sender: Any) {
-        do {
-            try room.exit()
-            self.dismiss(animated: true, completion: nil)
-        } catch {
-            print("Exiting with error: \(error)")
-            self.dismiss(animated: true, completion: nil)
-        }
+        <#LeaveRoom#>
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func muteMicrophone(_ sender: UIButton) {
-        if room.localParticipant?.isAudioEnabled == true {
-            room.localParticipant?.muteMicrophone()
-            sender.setImage(.init(
-                systemName: "mic.slash.fill",
-                withConfiguration: UIImage.SymbolConfiguration(scale: .large)
-            ), for: .normal)
-        } else {
-            room.localParticipant?.unmuteMicrophone()
-            sender.setImage(.init(
-                systemName: "mic.fill",
-                withConfiguration: UIImage.SymbolConfiguration(scale: .large)
-            ), for: .normal)
-        }
+        <#MuteMicrophone#>
         
         UIView.performWithoutAnimation {
             collectionView.reloadItems(at: [localParticipantIndex].compactMap { $0 })
@@ -78,10 +61,7 @@ class ChannelViewController: UIViewController {
     }
     
     func showUIKit(channel: SBDGroupChannel) {
-        let viewController = SBUChannelViewController(channel: channel, messageListParams: .init())
-        let navigationController = UINavigationController(rootViewController: viewController)
-        navigationController.modalPresentationStyle = .fullScreen
-        self.present(navigationController, animated: true)
+        <#ShowChatChannel#>
     }
 }
 

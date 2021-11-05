@@ -30,20 +30,7 @@ class SignInViewController: UIViewController {
         let nickname = nicknameTextField.text ?? userId
         
         // MARK: - Authenticate with Sendbird
-        SendBirdCall.authenticate(with: .init(userId: userId)) { _, callError in
-            SBDMain.connect(withUserId: userId) { _, chatError in
-                guard callError == nil, chatError == nil else { return }
-                
-                URLSession.shared.dataTask(with: URL(string: "https://picsum.photos/200")!) { _, response, _ in
-                    SBDMain.updateCurrentUserInfo(
-                        withNickname: nickname,
-                        profileUrl: response?.url?.absoluteString
-                    ) { _ in
-                        self.performSegue(withIdentifier: "login", sender: nil)
-                    }
-                }.resume()
-            }
-        }
+        <#ConnectCalls#>
     }
     
     @IBAction func userIdTextChanged(_ sender: UITextField) {

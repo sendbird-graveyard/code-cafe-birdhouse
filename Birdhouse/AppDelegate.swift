@@ -13,10 +13,8 @@ import SendBirdCalls
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // MARK: - Configure Application Id
-        let appId: String = <#AppId#>
-        SBDMain.initWithApplicationId(appId)
-        SendBirdCall.configure(appId: appId)
-        SBUMain.initialize(applicationId: appId)
+        let appId: String = "ADD6749C-9165-48E4-ABEB-BF58F7C399DF"
+        <#InitSendbird#>
         
         return true
     }

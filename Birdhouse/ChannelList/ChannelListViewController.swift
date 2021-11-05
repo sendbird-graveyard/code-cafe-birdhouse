@@ -77,25 +77,7 @@ class ChannelListViewController: UIViewController {
     }
     
     func createRoom(title: String, completionHandler: ((Room) -> Void)?) {
-        let params = RoomParams(roomType: .largeRoomForAudioOnly)
-        params.customItems = ["title": title]
-        SendBirdCall.createRoom(with: params) { room, error in
-            guard let room = room, error == nil else {
-                return
-            }
-            
-            let channelParams = SBDGroupChannelParams()
-            channelParams.channelUrl = room.roomId
-            channelParams.name = title
-            channelParams.isPublic = true
-            SBDGroupChannel.createChannel(with: channelParams) { groupChannel, error in
-                guard groupChannel != nil, error == nil else { return }
-                
-                self.rooms.insert(room, at: 0)
-                self.tableView.reloadData()
-                completionHandler?(room)
-            }
-        }
+        <#CreateRoom#>
     }
     
     // MARK: - Enter Room
@@ -110,11 +92,7 @@ class ChannelListViewController: UIViewController {
     // MARK: - Query Room
     @discardableResult
     func createRoomQuery() -> RoomListQuery? {
-        let params = RoomListQuery.Params()
-            .setType(.largeRoomForAudioOnly)
-            .setState(.open)
-        query = SendBirdCall.createRoomListQuery(with: params)
-        return query
+        <#CreateRoomQuery#>
     }
     
     func loadChannels(completionHandler: (() -> Void)? = nil) {
@@ -123,14 +101,7 @@ class ChannelListViewController: UIViewController {
             return
         }
         
-        guard !query.isLoading, query.hasNext else { return }
-        query.next { rooms, error in
-            guard let rooms = rooms else { return }
-            
-            self.rooms.append(contentsOf: rooms)
-            self.tableView.reloadData()
-            completionHandler?()
-        }
+        <#QueryChannels#>
     }
     
     @objc
